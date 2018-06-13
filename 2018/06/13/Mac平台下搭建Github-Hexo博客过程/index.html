@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png">
-<meta property="og:updated_time" content="2018-06-13T13:51:24.624Z">
+<meta property="og:updated_time" content="2018-06-13T13:55:01.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac平台下搭建Github+Hexo博客过程">
 <meta name="twitter:description" content="作为自己的第一篇博客，主要记录一下自己搭建github+hexo博客的过程，也激励自己要常写博客，常总结常记录！ 一、Requirements在安装Hexo之前需要先安装Node.js和Git Node.js用nvm来安装Node.js或者Node官网下载LTS版本安装，nvm的方式安装,输入以下命令安装nvm：">
@@ -457,7 +457,7 @@
 <h2 id="三、关联github"><a href="#三、关联github" class="headerlink" title="三、关联github"></a>三、关联github</h2><h4 id="1-新建github仓库"><a href="#1-新建github仓库" class="headerlink" title="1. 新建github仓库"></a>1. 新建github仓库</h4><p>在自己的github上新建一个仓库，名为<code>yourname.github.io</code>,<code>yourname</code>是github的用户名（我的是<code>wangxianh.github.io</code>），这个仓库命名规则固定不变。<br>如果之前没有生成过ssh的key，需要新建一对ssh的key,并将<code>id_rsa.pub</code>添加到github,这里参考<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="noopener">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
 <h4 id="2-修改-config-yml文件"><a href="#2-修改-config-yml文件" class="headerlink" title="2. 修改_config.yml文件"></a>2. 修改<code>_config.yml</code>文件</h4><p>编辑本地hexo根目录下的<code>_config.yml</code>文件，找到<code>deploy</code>关键字，然后添加如下三行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repository: git@github.com:yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure>
-<font color="#ffff00" size="3">注意：</font>  
+<font color="#00ffff">注意：</font>  
 
 <p>每个关键字的冒号后面都有个空格</p>
 <h4 id="3-部署运行"><a href="#3-部署运行" class="headerlink" title="3. 部署运行"></a>3. 部署运行</h4><p>上面两步就关联好了github,接下来需要进入hexo目录下执行以下命令：</p>
@@ -465,10 +465,10 @@
 <p>此时浏览器中输入<a href="https://yourname.github.io" target="_blank" rel="noopener">https://yourname.github.io</a>就能看到自己博客啦!</p>
 <font color="#FF0000">可能出现的问题：</font>  
 
-<p>1.输入 <code>hexo d</code> 可能出现如下问题：<font color="FF0000">ERROR Deployer not found: git</font><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图">  </p>
+<p>1.输入 <code>hexo d</code> 可能出现如下问题：<font color="#FF0000">ERROR Deployer not found: git</font><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图">  </p>
 <p>解决方案：终端输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>2.输入 <code>hexo d</code> 推送到git时可能出现: <font color="FF0000">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github  </p>
+<p>2.输入 <code>hexo d</code> 推送到git时可能出现: <font color="#FF0000">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github  </p>
 <p>解决方案：参考<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="noopener">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
 <h2 id="四、关联域名"><a href="#四、关联域名" class="headerlink" title="四、关联域名"></a>四、关联域名</h2><h4 id="1-域名解析"><a href="#1-域名解析" class="headerlink" title="1. 域名解析"></a>1. 域名解析</h4><p>可以在阿里云上购买一个域名，在阿里云<code>管理控制台</code>找到购买的域名（注意域名状态审核中无法访问），添加两条域名解析规则：<br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png" alt="效果图"><br>这两条解析可以保证你的域名带不带www都能正常解析。</p>
 <h4 id="2-添加CNAME文件"><a href="#2-添加CNAME文件" class="headerlink" title="2. 添加CNAME文件"></a>2. 添加CNAME文件</h4><p>进入<code>hexo/themes/landscape/source</code>目录下新建<code>CNAME</code>文件(没有后缀)，内容为自己的域名（我的是<a href="http://www.hallow.top" target="_blank" rel="noopener">http://www.hallow.top</a>).</p>
@@ -485,11 +485,11 @@
 <li><p>设置语言:<br>将 language 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<code>language: zh-Hans</code></p>
 </li>
 </ul>
-<font size="3"> 在<font color="54FF9F">主题配置文件</font>中（<code>hexo/themes/next</code>目录下的<code>_config.yml</code>文件）：</font>  
+<font size="3"> 在<font color="#54FF9F">主题配置文件</font>中（<code>hexo/themes/next</code>目录下的<code>_config.yml</code>文件）：</font>  
 
 <ul>
 <li>设置菜单<ul>
-<li>设定菜单内容，对应的字段是<code>menu</code>。 将你需用启用的 菜单前面注释 # 去除即可。<br><font color="FF0000">注意：</font>若你的站点运行在子目录中，请将链接前缀的 / 去掉</li>
+<li>设定菜单内容，对应的字段是<code>menu</code>。 将你需用启用的 菜单前面注释 # 去除即可。<br><font color="#FF0000">注意：</font>若你的站点运行在子目录中，请将链接前缀的 / 去掉</li>
 <li>设置菜单项的显示文本。以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在<code>menu</code>字段下添加一项：</li>
 </ul>
 </li>
