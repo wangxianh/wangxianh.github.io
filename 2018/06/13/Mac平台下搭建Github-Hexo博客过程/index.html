@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png">
-<meta property="og:updated_time" content="2018-06-13T12:02:31.279Z">
+<meta property="og:updated_time" content="2018-06-13T12:15:26.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac平台下搭建Github+Hexo博客过程">
 <meta name="twitter:description" content="作为自己的第一篇博客，主要记录一下自己搭建github+hexo博客的过程，也激励自己要常写博客，常总结常记录！ 一、Requirements在安装Hexo之前需要先安装Node.js和Git Node.js用nvm来安装Node.js或者Node官网下载LTS版本安装，nvm的方式安装,输入以下命令安装nvm：">
@@ -460,10 +460,10 @@
 <p>此时浏览器中输入<a href="https://yourname.github.io" target="_blank" rel="noopener">https://yourname.github.io</a> 就能看到自己博客啦!</p>
 <p><font color="FF0000">可能出现的问题：</font></p>
 <ol>
-<li><p>输入hexo d可能出现如下问题：<font color="FFFFFF" backgound="000000">ERROR Deployer not found: git</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图"><br>解决方案：终端输入：</p>
+<li><p>输入 <code>hexo d</code> 可能出现如下问题：<font color="FFFFFF" backgound="000000">ERROR Deployer not found: git</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图"><br>解决方案：终端输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>输入<code>hexo d</code>推送到git时可能出现: <font color="FFFFFF" backgound="000000">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github<br>解决方案：参考<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="noopener">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
+<li><p>输入 <code>hexo d</code> 推送到git时可能出现: <font color="FFFFFF" backgound="000000">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github<br>解决方案：参考<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="noopener">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
 </li>
 </ol>
 <h2 id="四、关联域名"><a href="#四、关联域名" class="headerlink" title="四、关联域名"></a>四、关联域名</h2><h4 id="1-域名解析"><a href="#1-域名解析" class="headerlink" title="1. 域名解析"></a>1. 域名解析</h4><p>可以在阿里云上购买一个域名，在阿里云<code>管理控制台</code>找到购买的域名（注意域名状态审核中无法访问），添加两条域名解析规则：<br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png" alt="效果图"><br>这两条解析可以保证你的域名带不带www都能正常解析。</p>
@@ -474,7 +474,7 @@
 <h2 id="五、更改博客主题"><a href="#五、更改博客主题" class="headerlink" title="五、更改博客主题"></a>五、更改博客主题</h2><p>参考：<a href="http://theme-next.iissnan.com/getting-started.html#stable]" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html#stable]</a> </p>
 <h4 id="1-下载next主题"><a href="#1-下载next主题" class="headerlink" title="1. 下载next主题"></a>1. 下载next主题</h4><p>在终端定位到hexo目录下，使用git下载主题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> your-hexo</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
 <h4 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2. 启用主题"></a>2. 启用主题</h4><p>打开hexo根目录下的<code>_config.yml</code>(称为<font color="0000cc">站点配置文件</font>)，找到<code>theme</code>字段，将其值改为<code>next</code><br>拷贝CNAME文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp themes/landscape/<span class="built_in">source</span>/CNAME themes/next/<span class="built_in">source</span>    <span class="comment">#在hexo目录下将原主题中的CNAME拷贝到next主题的source文件</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="3-定制主题"><a href="#3-定制主题" class="headerlink" title="3. 定制主题"></a>3. 定制主题</h4><p><font size="5">在<font size="5" bgcolor="COFF3E">站点配置文件</font>中（hexo根目录下的<code>_config.yml</code>文件）：</font></p>
+<h4 id="3-定制主题"><a href="#3-定制主题" class="headerlink" title="3. 定制主题"></a>3. 定制主题</h4><p><font size="4">在<font bgcolor="COFF3E">站点配置文件</font>中（hexo根目录下的<code>_config.yml</code>文件）：</font></p>
 <ul>
 <li><p>设置作者昵称:<br>找到<code>author</code>关键字，设置打开hexo根目录下的autour为你的昵称</p>
 </li>
@@ -482,30 +482,40 @@
 </li>
 <li><p>选择Scheme:<br>搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可，一般选择<code>scheme: Pisces</code></p>
 </li>
-<li><p>设置语言:<br>将 language 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<br> <code>language: zh-Hans</code></p>
+<li><p>设置语言:<br>将 language 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：<code>language: zh-Hans</code></p>
 </li>
 </ul>
-<p><font size="5"> 在<font bgcolor="54FF9F">主题配置文件</font>中（<code>hexo/themes/next</code>目录下的<code>_config.yml</code>文件）：</font></p>
+<p><font size="4"> 在<font color="54FF9F">主题配置文件</font>中（<code>hexo/themes/next</code>目录下的<code>_config.yml</code>文件）：</font></p>
 <ul>
-<li>设置菜单<br>（1）设定菜单内容，对应的字段是<code>menu</code>。 将你需用启用的 菜单前面注释 # 去除即可。<br> <font color="FF0000">注意：</font>若你的站点运行在子目录中，请将链接前缀的 / 去掉<br>（2）设置菜单项的显示文本。以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在<code>menu</code>字段下添加一项：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">something: 有料</span><br></pre></td></tr></table></figure>
+<li><p>设置菜单</p>
+<ul>
+<li>设定菜单内容，对应的字段是<code>menu</code>。 将你需用启用的 菜单前面注释 # 去除即可。<br><font color="FF0000">注意：</font>若你的站点运行在子目录中，请将链接前缀的 / 去掉</li>
+<li><p>设置菜单项的显示文本。以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Hans.yml</code>，在<code>menu</code>字段下添加一项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">something: 有料</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设定菜单项的图标</p>
 </li>
 </ul>
-<p>（3）设定菜单项的图标</p>
+</li>
+<li><p>设置侧栏</p>
 <ul>
-<li>设置侧栏<br>（1）设置侧栏的位置，修改<code>sidebar.position</code>的值，支持的选项有：<ul>
+<li>设置侧栏的位置，修改<code>sidebar.position</code>的值，支持的选项有：</li>
+</ul>
+<ul>
 <li>left - 靠左放置</li>
 <li>right - 靠右放置<br>这里设置为靠左放置：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">    position: left</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
+<ul>
+<li>设置侧栏的显示时机，修改<code>sidebar.display</code>的值</li>
 </ul>
-<p>（2）设置侧栏的显示时机，修改<code>sidebar.display</code>的值</p>
 <ul>
 <li>post - 默认行为，在文章页面（拥有目录列表）时显示</li>
 <li>always - 在所有页面中都显示</li>
 <li>hide - 在所有页面中都隐藏（可以手动展开）</li>
-<li><p>remove - 完全移除</p>
-<p>  这里设置在所有页面中显示：</p>
+<li>remove - 完全移除</li>
+</ul>
+<p>这里设置在所有页面中显示：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">    display: always</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
