@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png">
-<meta property="og:updated_time" content="2018-06-13T14:13:01.664Z">
+<meta property="og:updated_time" content="2018-06-13T14:17:54.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac平台下搭建Github+Hexo博客过程">
 <meta name="twitter:description" content="作为自己的第一篇博客，主要记录一下自己搭建github+hexo博客的过程，也激励自己要常写博客，常总结常记录！ 一、Requirements在安装Hexo之前需要先安装Node.js和Git Node.js用nvm来安装Node.js或者Node官网下载LTS版本安装，nvm的方式安装,输入以下命令安装nvm：">
@@ -463,7 +463,7 @@
 <h4 id="3-部署运行"><a href="#3-部署运行" class="headerlink" title="3. 部署运行"></a>3. 部署运行</h4><p>上面两步就关联好了github,接下来需要进入hexo目录下执行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean     <span class="comment">#清除缓存db.json和public文件夹 </span></span><br><span class="line">$ hexo g         <span class="comment">#生成md文件的静态页面，md文件在hexo/source/_posts目录下，新写的md文件复制到此即可</span></span><br><span class="line">$ hexo d         <span class="comment">#将public文件夹中的内容推送到git仓库</span></span><br></pre></td></tr></table></figure>
 <p>此时浏览器中输入<a href="https://yourname.github.io" target="_blank" rel="noopener">https://yourname.github.io</a>就能看到自己博客啦!</p>
-<font color="#FF0000">可能出现的问题：</font>  
+<font color="red">可能出现的问题：</font>  
 
 <p>1.输入 <code>hexo d</code> 可能出现如下问题：<font color="red">ERROR Deployer not found: git</font><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图">  </p>
 <p>解决方案：终端输入：</p>
