@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png">
 <meta property="og:image" content="http://yoursite.com/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png">
-<meta property="og:updated_time" content="2018-06-13T14:02:12.820Z">
+<meta property="og:updated_time" content="2018-06-13T14:13:01.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac平台下搭建Github+Hexo博客过程">
 <meta name="twitter:description" content="作为自己的第一篇博客，主要记录一下自己搭建github+hexo博客的过程，也激励自己要常写博客，常总结常记录！ 一、Requirements在安装Hexo之前需要先安装Node.js和Git Node.js用nvm来安装Node.js或者Node官网下载LTS版本安装，nvm的方式安装,输入以下命令安装nvm：">
@@ -468,7 +468,7 @@
 <p>1.输入 <code>hexo d</code> 可能出现如下问题：<font color="red">ERROR Deployer not found: git</font><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error1.png" alt="效果图">  </p>
 <p>解决方案：终端输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>2.输入 <code>hexo d</code> 推送到git时可能出现: <font color="#red">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github  </p>
+<p>2.输入 <code>hexo d</code> 推送到git时可能出现: <font color="red">Permission denied(publickey)</font><br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/error2.png" alt="效果图"><br>原因：没有将公钥添加到github  </p>
 <p>解决方案：参考<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="noopener">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></p>
 <h2 id="四、关联域名"><a href="#四、关联域名" class="headerlink" title="四、关联域名"></a>四、关联域名</h2><h4 id="1-域名解析"><a href="#1-域名解析" class="headerlink" title="1. 域名解析"></a>1. 域名解析</h4><p>可以在阿里云上购买一个域名，在阿里云<code>管理控制台</code>找到购买的域名（注意域名状态审核中无法访问），添加两条域名解析规则：<br><img src="/2018/06/13/Mac平台下搭建Github-Hexo博客过程/cname.png" alt="效果图"><br>这两条解析可以保证你的域名带不带www都能正常解析。</p>
 <h4 id="2-添加CNAME文件"><a href="#2-添加CNAME文件" class="headerlink" title="2. 添加CNAME文件"></a>2. 添加CNAME文件</h4><p>进入<code>hexo/themes/landscape/source</code>目录下新建<code>CNAME</code>文件(没有后缀)，内容为自己的域名（我的是<a href="http://www.hallow.top" target="_blank" rel="noopener">http://www.hallow.top</a>).</p>
