@@ -1749,18 +1749,6 @@ pre .javascript .function {
 .sidebar-toggle-line:first-child {
   margin-top: 0;
 }
-.site-author-name {
-  margin: 0;
-  text-align: center;
-  color: #222;
-  font-weight: 600;
-}
-.site-description {
-  margin-top: 0;
-  text-align: center;
-  font-size: 13px;
-  color: #999;
-}
 .site-author-image {
   display: block;
   margin: 0 auto;
@@ -1779,6 +1767,18 @@ pre .javascript .function {
   -webkit-transition: -webkit-transform 1s ease-out;
   -moz-transition: -moz-transform 1s ease-out;
   transition: transform 1s ease-out;
+}
+.site-author-name {
+  margin: 0;
+  text-align: center;
+  color: #222;
+  font-weight: 600;
+}
+.site-description {
+  margin-top: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
 }
 img:hover {
 /* 鼠标经过停止头像旋转 
@@ -1941,7 +1941,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #621bdd;
+  background: #38e2f9;
 }
 .links-of-blogroll {
   font-size: 13px;
