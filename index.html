@@ -1441,33 +1441,7 @@
   <script type="text/javascript" src="/lib/zclip/clipboard.min.js"></script>	
 <script type="text/javascript" src="/js/src/custom.js"></script>
 
-  <script type="text/javascript">
-    
-    $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
- 
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '' + '全选' + ''; 
-        var button = $(button_html); $(button).click(function() { SelectText(code); }); $(button).insertBefore(this); }); });
-  </script>
+  
 
   <script type="text/javascript" src="/js/src/love.js"></script>
 
