@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://bestyou.wang/2018/06/19/Hexo%EF%BC%9A%E4%BD%BF%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2018-06-19T13:43:30.193Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo：使用七牛云存储静态资源</title>
+        <pubTime>2018-06-19T08:05:42.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>七牛云</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://bestyou.wang/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://bestyou.wang/2018/06/19/git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2018-06-19T13:38:28.460Z</lastmod>
+    <lastmod>2018-06-19T13:42:33.987Z</lastmod>
     <data>
         <display>
         <title>Git基本操作</title>
@@ -39,28 +61,6 @@
            
              
               <breadCrumb title="技术" url="http://bestyou.wang/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://bestyou.wang/2018/06/19/Hexo%EF%BC%9A%E4%BD%BF%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2018-06-19T09:53:12.515Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo：使用七牛云存储静态资源</title>
-        <pubTime>2018-06-19T08:05:42.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>七牛云</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="http://bestyou.wang/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
