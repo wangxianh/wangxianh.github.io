@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bestyou.wang/2018/06/12/hello-world/</loc>
+    
+    <lastmod>2018-06-19T09:28:38.658Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bestyou.wang/2018/06/19/Hexo%EF%BC%9A%E4%BD%BF%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/</loc>
     
-    <lastmod>2018-06-19T09:24:04.599Z</lastmod>
+    <lastmod>2018-06-19T09:28:17.608Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>http://bestyou.wang/tags/index.html</loc>
     
     <lastmod>2018-06-15T02:16:46.883Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bestyou.wang/2018/06/12/hello-world/</loc>
-    
-    <lastmod>2018-06-13T06:37:57.847Z</lastmod>
     
   </url>
   
