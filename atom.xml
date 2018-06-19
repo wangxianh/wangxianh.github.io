@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bestyou.wang/"/>
-  <updated>2018-06-19T09:20:26.728Z</updated>
+  <updated>2018-06-19T09:24:04.599Z</updated>
   <id>http://bestyou.wang/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://bestyou.wang/2018/06/19/Hexo%EF%BC%9A%E4%BD%BF%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/"/>
     <id>http://bestyou.wang/2018/06/19/Hexo：使用七牛云存储静态资源/</id>
     <published>2018-06-19T08:05:42.000Z</published>
-    <updated>2018-06-19T09:20:26.728Z</updated>
+    <updated>2018-06-19T09:24:04.599Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当我们想在博客中插入图片时，通常有两种方式引用图片：</p><ol><li>图片存储在本地，通过<code>\!\[\]\(本地图片url\)</code>插入图片，图片一般放在与.md文件同名的文件夹中</li><li>图片存储在七牛云，通过引入外链的方式插入图片<code>\!\[\]\(外链url\)</code><br>如果博客中图片数量很多，建议使用七牛云来存储，一是git空间有限，静态资源放到七牛云可以节省空间，二是使用云存储能提升网站加载速度，三是博客迁移时也很方便。下面详细介绍如何使用七牛云来存储图片以及插入博客：<a id="more"></a></li></ol><h2 id="1-注册登录七牛云"><a href="#1-注册登录七牛云" class="headerlink" title="1. 注册登录七牛云"></a>1. 注册登录七牛云</h2><p>打开<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>注册一个账号，登录后需要先进行实名认证，认证成功后，打开<code>管理控制台</code>，找到<code>对象存储</code>，点击<code>立即添加</code><br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/qiniu.png" alt=""><br>然后填写<code>存储空间名称</code>，选择<code>存储区域</code>，点击<code>确定创建</code><br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/create.png" alt=""><br>打开刚刚创建的存储空间，切换到<code>内容管理</code>，选择<code>上传文件</code>就可以将本地的静态资源存储到七牛云。<br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/upload.png" alt="">    </p><h2 id="2-博客中插入图片"><a href="#2-博客中插入图片" class="headerlink" title="2. 博客中插入图片"></a>2. 博客中插入图片</h2><p>选择要引用的图片，点击<code>复制外链</code>，在博客中需要插入图片的地方使用<code>\!\[\]\(外链\)</code>或者<code>\&lt;img src=&quot;外链&quot; /\&gt;</code>的方式引入。<br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/wailian.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当我们想在博客中插入图片时，通常有两种方式引用图片：</p><ol><li>图片存储在本地，通过<code>\!\[\]\(本地图片url\)</code>插入图片，图片一般放在与.md文件同名的文件夹中</li><li>图片存储在七牛云，通过引入外链的方式插入图片<code>\!\[\]\(外链url\)</code><br>如果博客中图片数量很多，建议使用七牛云来存储，一是git空间有限，静态资源放到七牛云可以节省空间，二是使用云存储能提升网站加载速度，三是博客迁移时也很方便。下面详细介绍如何使用七牛云来存储图片以及插入博客：<a id="more"></a></li></ol><h2 id="1-注册登录七牛云"><a href="#1-注册登录七牛云" class="headerlink" title="1. 注册登录七牛云"></a>1. 注册登录七牛云</h2><p>打开<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>注册一个账号，登录后需要先进行实名认证，认证成功后，打开<code>管理控制台</code>，找到<code>对象存储</code>，点击<code>立即添加</code><br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/qiniu.png" alt=""><br>然后填写<code>存储空间名称</code>，选择<code>存储区域</code>，点击<code>确定创建</code><br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/create.png" alt=""><br>打开刚刚创建的存储空间，切换到<code>内容管理</code>，选择<code>上传文件</code>就可以将本地的静态资源存储到七牛云。<br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/upload.png" alt="">    </p><h2 id="2-博客中插入图片"><a href="#2-博客中插入图片" class="headerlink" title="2. 博客中插入图片"></a>2. 博客中插入图片</h2><p>选择要引用的图片，点击<code>复制外链</code>，在博客中需要插入图片的地方使用<code>![](外链)</code>或者<code>&lt;img src=&quot;外链&quot; \&gt;</code>的方式引入。<br><img src="/2018/06/19/Hexo：使用七牛云存储静态资源/wailian.png" alt=""></p>]]></content>
     
     <summary type="html">
     
