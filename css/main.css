@@ -1940,7 +1940,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #77ff41;
+  background: #ff1198;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2726,9 +2726,6 @@ hr {
 .main-inner {
   margin-top: 80px;
 }
-.header {
-  background: url("http://paivdhuxj.bkt.clouddn.com/bg.jpg") no-repeat;
-}
 .header-inner {
   padding: 25px 0 20px;
 }
@@ -3026,10 +3023,7 @@ hr {
 }
 body {
   background: url("http://paivdhuxj.bkt.clouddn.com/bg4.png");
-  background-attanchment: fixed;
-}
-a {
-  color: #fff;
+  background-attachment: fixed;
 }
 .post {
   margin-top: 60px;
@@ -3038,10 +3032,10 @@ a {
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.9);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.9);
 }
-.post-expand {
+.post-expend {
   background: rgba(255,255,255,0.8);
 }
-article .post .post-type-normal {
+article.post.post-type-normal {
   background: rgba(255,255,255,0.8);
 }
 .hider_title {
