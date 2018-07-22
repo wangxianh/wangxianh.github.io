@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bestyou.wang/"/>
-  <updated>2018-06-26T01:47:34.488Z</updated>
+  <updated>2018-07-22T11:36:46.861Z</updated>
   <id>http://bestyou.wang/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高性能建站指南总结</title>
+    <link href="http://bestyou.wang/2018/07/22/%E9%AB%98%E6%80%A7%E8%83%BD%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E6%80%BB%E7%BB%93/"/>
+    <id>http://bestyou.wang/2018/07/22/高性能建站指南总结/</id>
+    <published>2018-07-22T11:28:14.000Z</published>
+    <updated>2018-07-22T11:36:46.861Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网站性能对前端工程师来说非常重要，书中总结了14条规则来提升网站性能，以下是自己的读书笔记。</p><h4 id="1-减少HTTP请求"><a href="#1-减少HTTP请求" class="headerlink" title="1. 减少HTTP请求"></a>1. 减少HTTP请求</h4><ul><li>使用图片地图在一个图片上关联多个URL</li><li>使用CSS Sprites将多幅图片合并为一幅单独的图片。使用<code>background-image</code> 和 <code>background-position</code>属性将HTML元素放置到背景图片中期望的位置。</li><li>内联图片：通过使用<code>data:URL</code>模式可以在web页面中包含图片而不需要额外的http请求。</li><li>合并脚本和样式表</li></ul><h4 id="2-使用CDN-内容发布网络"><a href="#2-使用CDN-内容发布网络" class="headerlink" title="2. 使用CDN(内容发布网络)"></a>2. 使用CDN(内容发布网络)</h4><p>CDN是一组分布在不同地理位置的Web服务器。用于发布静态内容，包括图片、样式表、脚本和Flash。CDN是将源站内容分发至最接近用户的节点，使用户可以就近获取所需内容，提高用户访问的响应度和成功率。<br>CDN网络相当于是在用户和服务器之间增加Cache层，通过接管DNS的实现来将用户的请求引导到Cache上获得源服务器上的数据。</p><h4 id="3-添加Expires头"><a href="#3-添加Expires头" class="headerlink" title="3. 添加Expires头"></a>3. 添加Expires头</h4><p>Web服务器使用Expires告诉客户端可以使用一个组件的缓存，直到指定的时间为止。<br><strong>Expires缺点</strong>：</p><ul><li>要求服务器和客户端的时钟严格同步</li><li>过期日期需要经常检查，一旦过期需要在服务器配置中提供一个新的日期  </li></ul><p>HTTP1.1中引入了<code>Cache-Control</code>来克服Expires的限制，<code>Cache-Control</code>使用<code>max-age</code>来指定组件缓存时间。如果两者同时使用，<code>max-age</code>会覆盖<code>Expires</code>.</p><h4 id="4-压缩组件"><a href="#4-压缩组件" class="headerlink" title="4. 压缩组件"></a>4. 压缩组件</h4><p>使用<code>gzip</code>压缩HTTP响应包来减少网络响应时间。压缩内容包括：HTML文档、脚本、样式表。<br>HTTP1.1开始，Web客户端可以通过HTTP请求中的<code>Accept-Encoding</code>来表示对压缩的支持.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request:</span><br><span class="line">    Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure></p><p>Web服务器通过响应中的<code>Content-Encoding</code>来通知Web客户端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">response:</span><br><span class="line">    Content-Encoding: gzip</span><br></pre></td></tr></table></figure></p><h4 id="5-将样式表放在顶部"><a href="#5-将样式表放在顶部" class="headerlink" title="5. 将样式表放在顶部"></a>5. 将样式表放在顶部</h4><p>将样式表放在顶部的HEAD中可以避免白屏</p><h4 id="6-将脚本放在底部"><a href="#6-将脚本放在底部" class="headerlink" title="6. 将脚本放在底部"></a>6. 将脚本放在底部</h4><h4 id="7-避免CSS表达式"><a href="#7-避免CSS表达式" class="headerlink" title="7. 避免CSS表达式"></a>7. 避免CSS表达式</h4><h4 id="8-使用外部javascript和css"><a href="#8-使用外部javascript和css" class="headerlink" title="8. 使用外部javascript和css"></a>8. 使用外部javascript和css</h4><h4 id="9-减少DNS查找"><a href="#9-减少DNS查找" class="headerlink" title="9. 减少DNS查找"></a>9. 减少DNS查找</h4><h4 id="10-精简javascript"><a href="#10-精简javascript" class="headerlink" title="10. 精简javascript"></a>10. 精简javascript</h4><h4 id="11-避免重定向"><a href="#11-避免重定向" class="headerlink" title="11. 避免重定向"></a>11. 避免重定向</h4><h4 id="12-删除重复脚本"><a href="#12-删除重复脚本" class="headerlink" title="12. 删除重复脚本"></a>12. 删除重复脚本</h4><h4 id="13-配置ETag"><a href="#13-配置ETag" class="headerlink" title="13. 配置ETag"></a>13. 配置ETag</h4><h4 id="14-使Ajax可缓存"><a href="#14-使Ajax可缓存" class="headerlink" title="14. 使Ajax可缓存"></a>14. 使Ajax可缓存</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bestyou.wang/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="网站性能" scheme="http://bestyou.wang/tags/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text3安装配置</title>
+    <link href="http://bestyou.wang/2018/07/22/Sublime-Text3%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>http://bestyou.wang/2018/07/22/Sublime-Text3安装配置/</id>
+    <published>2018-07-22T11:19:37.000Z</published>
+    <updated>2018-07-22T11:36:40.386Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直习惯用Sublime Text编辑器，通过安装一些插件，Sublime Text的功能变得很强大，可以根据自己的需求安装插件，下面介绍几个很实用的插件。</p><h2 id="一、Sublime下载安装"><a href="#一、Sublime下载安装" class="headerlink" title="一、Sublime下载安装"></a>一、Sublime下载安装</h2><p><a href="https://www.sublimetext.com/" target="_blank" rel="noopener">官网</a>上直接下载<code>sublime text3</code>进行安装</p><h2 id="二、插件安装"><a href="#二、插件安装" class="headerlink" title="二、插件安装"></a>二、插件安装</h2><h4 id="1-安装Package-Control"><a href="#1-安装Package-Control" class="headerlink" title="1. 安装Package Control"></a>1. 安装Package Control</h4><p>在安装插件之前需要先安装<code>Package Control</code>.安装方式是按住<code>ctrl+shift+p</code>打开插件安装弹框，输入关键词<code>package install</code>或者直接输入关键词<code>pci</code>选择<code>package control: package install</code>回车即可安装成功。</p><h4 id="2-Color-Theme主题配置"><a href="#2-Color-Theme主题配置" class="headerlink" title="2. Color Theme主题配置"></a>2. <code>Color Theme</code>主题配置</h4><p>Sublime Text自带了几种主题，可通过<code>Preferences-&gt;Color Scheme</code>更换主题样式.另一种方式是安装主题插件，推荐<code>Material Theme</code>,安装方式：<br><strong>Step1:</strong> <code>command+shift+p</code>打开package install控制台<br><strong>Step2:</strong> 输入<code>Material Theme</code>回车，在安装完成后会提示你安装该主题配置的<code>icon</code>样式，选择安装。<br><strong>Step3:</strong> 激活<code>Material Theme</code>,<code>command+shift+p</code>打开控制台，输入<code>Material Active</code>回车</p><h4 id="3-emmet自动补全代码"><a href="#3-emmet自动补全代码" class="headerlink" title="3. emmet自动补全代码"></a>3. emmet自动补全代码</h4><p>emmet是一个<code>HTML/CSS</code>代码快速编写插件。安装完后，对于新的html文件，输入字符<code>!</code>，然后按<code>Tab</code>键会自动补全html基础结构。<br><strong>Step1:</strong> <code>ctrl+shift+p</code>打开package install控制台<br><strong>Step2:</strong> 输入<code>emmet</code>回车,下方会显示安装进度，安装完成后会显示说明文档。<br><strong>Step3:</strong> 安装PyV8插件<br>一般情况下当安装完emmet插件后会自动安装PyV8插件，这种自动安装方式可能会失败，这时需要手动下载PyV8插件并安装。安装方式如下：<br><strong>Step1:</strong> 下载PyV8插件，<a href="https://github.com/emmetio/pyv8-binaries" target="_blank" rel="noopener">git地址</a><br><strong>Step2:</strong> 拷贝到Sublime中<br>将下载的文件解压缩，如果是windows 64bit环境下找到Sublime Text3对应的<code>pyv8-win64-p3</code>文件，解压缩后将其中的<code>_PyV8.pyd</code>和<code>PyV8.py</code>两个文件拷贝到PyV8/windows-p3文件夹下(点击<code>Preferences-&gt;Browse Packages</code>新建<code>PyV8/windows-p3</code>文件夹)。<br><strong>Step3:</strong> 安装PyV8插件，再次打开Sublime后需等待安装结束。</p><h4 id="4-HTML-CSS-JS-Prettify格式化代码"><a href="#4-HTML-CSS-JS-Prettify格式化代码" class="headerlink" title="4. HTML-CSS-JS Prettify格式化代码"></a>4. <code>HTML-CSS-JS Prettify</code>格式化代码</h4><p><code>HTML-CSS-JS Prettify</code>是一个代码格式化插件，其依赖于<code>Node.js</code>，所以需要安装Node.js.  </p><p><strong>Step1:</strong> <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a>下载安装<code>Node.js</code><br><strong>Step2:</strong> Sublime中安装<code>HTML-CSS-JS Prettify</code>插件<br><strong>Step3:</strong> 确认<code>Node.js</code>安装路径<br>在Sublime界面右键选择<code>HTML-CSS-JS Prettify-&gt;Set node Path</code>确认Node.js安装路径是否正确。<br><strong>Step4:</strong> 格式化代码<br>鼠标右键<code>HTML-CSS-JS Prettify-&gt;Pretty Code</code></p><h4 id="5-Sidebar-Enhancements浏览器打开html文件"><a href="#5-Sidebar-Enhancements浏览器打开html文件" class="headerlink" title="5. Sidebar Enhancements浏览器打开html文件"></a>5. <code>Sidebar Enhancements</code>浏览器打开html文件</h4><p><strong>Step1</strong>: 安装<code>Sidebar Enhancements</code>插件<br><strong>Step2</strong>: 设置快捷键，打开<code>Preferences-&gt;Key Bindings</code>,在<code>User</code>中输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"keys"</span>: [<span class="string">"f5"</span>], </span><br><span class="line">    <span class="string">"command"</span>: <span class="string">"side_bar_files_open_with"</span>,</span><br><span class="line">    <span class="string">"args"</span>: &#123;</span><br><span class="line">    <span class="string">"paths"</span>: [],</span><br><span class="line">    <span class="string">"application"</span>: <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span>,//默认打开Chrome浏览器</span><br><span class="line">    <span class="string">"extensions"</span>: <span class="string">".*"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h4 id="6-Color-Highlight-颜色高亮"><a href="#6-Color-Highlight-颜色高亮" class="headerlink" title="6. Color Highlight 颜色高亮"></a>6. <code>Color Highlight</code> 颜色高亮</h4><h4 id="7-MarkdownExtended编辑markdown文件"><a href="#7-MarkdownExtended编辑markdown文件" class="headerlink" title="7. MarkdownExtended编辑markdown文件"></a>7. <code>MarkdownExtended</code>编辑markdown文件</h4><h4 id="8-MarkdownPreview浏览器打开markdown文件"><a href="#8-MarkdownPreview浏览器打开markdown文件" class="headerlink" title="8. MarkdownPreview浏览器打开markdown文件"></a>8. <code>MarkdownPreview</code>浏览器打开markdown文件</h4><h4 id="9-PrettyJSON格式化json代码"><a href="#9-PrettyJSON格式化json代码" class="headerlink" title="9. PrettyJSON格式化json代码"></a>9. <code>PrettyJSON</code>格式化json代码</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bestyou.wang/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="插件" scheme="http://bestyou.wang/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下部署Vue+Node+MongoDB项目</title>
