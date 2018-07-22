@@ -141,7 +141,7 @@
 <meta property="og:description" content="前言自己在学习git的时候总结了一些git的基本操作命令，可以方便查阅。参考阮一峰的Git教程 一、基本步骤">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://bestyou.wang/2018/06/19/git基本操作/image.png">
-<meta property="og:updated_time" content="2018-06-19T13:42:33.987Z">
+<meta property="og:updated_time" content="2018-07-22T11:14:41.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git基本操作">
 <meta name="twitter:description" content="前言自己在学习git的时候总结了一些git的基本操作命令，可以方便查阅。参考阮一峰的Git教程 一、基本步骤">
@@ -464,9 +464,9 @@
 <li><code>git add &lt;filename&gt;</code> : 将工作区（本地文件夹）文件添加到版本库的暂存区（git仓库）</li>
 <li><code>git commit</code> ：将暂存区内容提交到本地的master分支，HEAD指向master</li>
 <li><code>git remote add origin git@github.com:wangxianh/test.git</code> : 关联远程库，只需关联一次。添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。</li>
+<li><code>git remote rm origin</code> :删除关联的远程库</li>
 <li><code>git push -u origin master</code> : 将本地库的所有内容推送到远程仓库<br>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令：<code>git push origin master</code>。</li>
-</ol>
-<h2 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h2><ol>
+<li><code>git pull origin master</code>: 当远程分支上存在的内容比本地新时，需要先把远程分支上的内容<code>pull</code>下来，再进行推送。<h2 id="二、常用命令"><a href="#二、常用命令" class="headerlink" title="二、常用命令"></a>二、常用命令</h2></li>
 <li><code>git status</code> ：随时掌握工作区状态</li>
 <li><code>git diff</code> ：  如果git status告诉你有文件被修改过，用git diff可以查看修改内容。</li>
 <li><code>git log</code> ：显示从最近到最远的提交日志</li>
@@ -772,7 +772,7 @@
 <span class="theme-info">
   <div class="powered-by"></div>
   <i class="fa fa-pencil"></i>
-  <span class="post-count">本站总字数：8.3k</span>
+  <span class="post-count">本站总字数：8.4k</span>
 </span>
 
 </div>
