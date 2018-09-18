@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[get和post的区别]]></title>
+    <url>%2F2018%2F09%2F18%2Fget%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[get和post作为http请求方式，主要区别如下： 1. 传参方式不同get是使用URL或者cookie传参的。post将数据放在body中的。 2. 数据长度不同由于get的参数是放在URL中的，post的参数是放在body中的，因此get请求的数据长度有限制，一般不超过2000个字符，而post请求数据没有长度限制。主要原因是浏览器和服务器出于安全性和稳定性方面的考虑对URL长度有限制，因此对get请求的数据长度有限制。这个限制是针对所有的HTTP请求的，与请求方式无关。 3. 安全性方面post比get更安全。由于get请求的参数是直接暴露在URL中的，所以不能用来传递敏感消息。同时get请求参数会被完整保留在浏览历史记录里，而post的参数不会被保留。 总结：1. http协议并未规定get和post的长度限制2. get的最大长度限制是因为浏览器和服务器对URL长度有限制3. 不同浏览器和服务器对URL限制的最大长度不一样。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[高性能建站指南总结]]></title>
     <url>%2F2018%2F07%2F22%2F%E9%AB%98%E6%80%A7%E8%83%BD%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[前言网站性能对前端工程师来说非常重要，书中总结了14条规则来提升网站性能，以下是自己的读书笔记。 1. 减少HTTP请求 使用图片地图在一个图片上关联多个URL 使用CSS Sprites将多幅图片合并为一幅单独的图片。使用background-image 和 background-position属性将HTML元素放置到背景图片中期望的位置。 内联图片：通过使用data:URL模式可以在web页面中包含图片而不需要额外的http请求。 合并脚本和样式表 2. 使用CDN(内容发布网络)CDN是一组分布在不同地理位置的Web服务器。用于发布静态内容，包括图片、样式表、脚本和Flash。CDN是将源站内容分发至最接近用户的节点，使用户可以就近获取所需内容，提高用户访问的响应度和成功率。CDN网络相当于是在用户和服务器之间增加Cache层，通过接管DNS的实现来将用户的请求引导到Cache上获得源服务器上的数据。 3. 添加Expires头Web服务器使用Expires告诉客户端可以使用一个组件的缓存，直到指定的时间为止。Expires缺点： 要求服务器和客户端的时钟严格同步 过期日期需要经常检查，一旦过期需要在服务器配置中提供一个新的日期 HTTP1.1中引入了Cache-Control来克服Expires的限制，Cache-Control使用max-age来指定组件缓存时间。如果两者同时使用，max-age会覆盖Expires. 4. 压缩组件使用gzip压缩HTTP响应包来减少网络响应时间。压缩内容包括：HTML文档、脚本、样式表。HTTP1.1开始，Web客户端可以通过HTTP请求中的Accept-Encoding来表示对压缩的支持.12request: Accept-Encoding: gzip, deflate Web服务器通过响应中的Content-Encoding来通知Web客户端。12response: Content-Encoding: gzip 5. 将样式表放在顶部将样式表放在顶部的HEAD中可以避免白屏 6. 将脚本放在底部7. 避免CSS表达式8. 使用外部javascript和css9. 减少DNS查找10. 精简javascript11. 避免重定向12. 删除重复脚本13. 配置ETag14. 使Ajax可缓存]]></content>

@@ -1282,7 +1282,6 @@ pre .javascript .function {
 }
 .posts-expand {
   padding-top: 40px;
-  background: rgba(255,255,255,0.9);
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1941,7 +1940,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff13;
+  background: #ff597f;
 }
 .links-of-blogroll {
   font-size: 13px;
