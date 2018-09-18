@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bestyou.wang/"/>
-  <updated>2018-09-18T13:06:04.259Z</updated>
+  <updated>2018-09-18T13:16:01.248Z</updated>
   <id>http://bestyou.wang/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="http://bestyou.wang/2018/09/18/get%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://bestyou.wang/2018/09/18/get和post的区别/</id>
     <published>2018-09-18T12:18:54.000Z</published>
-    <updated>2018-09-18T13:06:04.259Z</updated>
+    <updated>2018-09-18T13:16:01.248Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>get和post作为http请求方式，主要区别如下：</p><h4 id="1-传参方式不同"><a href="#1-传参方式不同" class="headerlink" title="1. 传参方式不同"></a>1. 传参方式不同</h4><p>get是使用URL或者cookie传参的。post将数据放在body中的。</p><h4 id="2-数据长度不同"><a href="#2-数据长度不同" class="headerlink" title="2. 数据长度不同"></a>2. 数据长度不同</h4><p>由于get的参数是放在URL中的，post的参数是放在body中的，因此get请求的数据长度有限制，一般不超过2000个字符，而post请求数据没有长度限制。主要原因是浏览器和服务器出于安全性和稳定性方面的考虑对URL长度有限制，因此对get请求的数据长度有限制。这个限制是针对所有的HTTP请求的，与请求方式无关。</p><h4 id="3-安全性方面"><a href="#3-安全性方面" class="headerlink" title="3. 安全性方面"></a>3. 安全性方面</h4><p>post比get更安全。由于get请求的参数是直接暴露在URL中的，所以不能用来传递敏感消息。同时get请求参数会被完整保留在浏览历史记录里，而post的参数不会被保留。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><h4 id="1-http协议并未规定get和post的长度限制"><a href="#1-http协议并未规定get和post的长度限制" class="headerlink" title="1. http协议并未规定get和post的长度限制"></a>1. http协议并未规定get和post的长度限制</h4><h4 id="2-get的最大长度限制是因为浏览器和服务器对URL长度有限制"><a href="#2-get的最大长度限制是因为浏览器和服务器对URL长度有限制" class="headerlink" title="2. get的最大长度限制是因为浏览器和服务器对URL长度有限制"></a>2. get的最大长度限制是因为浏览器和服务器对URL长度有限制</h4><h4 id="3-不同浏览器和服务器对URL限制的最大长度不一样。"><a href="#3-不同浏览器和服务器对URL限制的最大长度不一样。" class="headerlink" title="3. 不同浏览器和服务器对URL限制的最大长度不一样。"></a>3. 不同浏览器和服务器对URL限制的最大长度不一样。</h4>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>get和post作为http请求方式，主要区别如下：</p><h4 id="1-传参方式不同"><a href="#1-传参方式不同" class="headerlink" title="1. 传参方式不同"></a>1. 传参方式不同</h4><p>get是使用URL或者cookie传参的。post将数据放在body中的。</p><h4 id="2-数据长度不同"><a href="#2-数据长度不同" class="headerlink" title="2. 数据长度不同"></a>2. 数据长度不同</h4><p>由于get的参数是放在URL中的，post的参数是放在body中的，因此get请求的数据长度有限制，一般不超过2000个字符，而post请求数据没有长度限制。主要原因是浏览器和服务器出于安全性和稳定性方面的考虑对URL长度有限制，因此对get请求的数据长度有限制。这个限制是针对所有的HTTP请求的，与请求方式无关。<br><a id="more"></a></p><h4 id="3-安全性方面"><a href="#3-安全性方面" class="headerlink" title="3. 安全性方面"></a>3. 安全性方面</h4><p>post比get更安全。由于get请求的参数是直接暴露在URL中的，所以不能用来传递敏感消息。同时get请求参数会被完整保留在浏览历史记录里，而post的参数不会被保留。</p><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ol><li>http协议并未规定get和post的长度限制  </li><li>get的最大长度限制是因为浏览器和服务器对URL长度有限制  </li><li>不同浏览器和服务器对URL限制的最大长度不一样。    </li></ol>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;p&gt;get和post作为http请求方式，主要区别如下：&lt;/p&gt;
+&lt;h4 id=&quot;1-传参方式不同&quot;&gt;&lt;a href=&quot;#1-传参方式不同&quot; class=&quot;headerlink&quot; title=&quot;1. 传参方式不同&quot;&gt;&lt;/a&gt;1. 传参方式不同&lt;/h4&gt;&lt;p&gt;get是使用URL或者cookie传参的。post将数据放在body中的。&lt;/p&gt;
+&lt;h4 id=&quot;2-数据长度不同&quot;&gt;&lt;a href=&quot;#2-数据长度不同&quot; class=&quot;headerlink&quot; title=&quot;2. 数据长度不同&quot;&gt;&lt;/a&gt;2. 数据长度不同&lt;/h4&gt;&lt;p&gt;由于get的参数是放在URL中的，post的参数是放在body中的，因此get请求的数据长度有限制，一般不超过2000个字符，而post请求数据没有长度限制。主要原因是浏览器和服务器出于安全性和稳定性方面的考虑对URL长度有限制，因此对get请求的数据长度有限制。这个限制是针对所有的HTTP请求的，与请求方式无关。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
