@@ -1569,6 +1569,26 @@ pre .javascript .function {
   display: inline-block;
   margin-right: 10px;
   font-size: 13px;
+  background: #ff945c;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+}
+.posts-expand .post-tags a:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-right-color: #ff945c;
+  position: absolute;
+  top: 0;
+  left: -18px;
+}
+.posts-expand .post-tags a:after {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
 }
 .post-nav {
   display: table;
@@ -1940,7 +1960,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff3b;
+  background: #ff70ed;
 }
 .links-of-blogroll {
   font-size: 13px;
