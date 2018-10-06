@@ -1007,6 +1007,7 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  color: #fff;
 }
 .pagination .prev:hover,
 .pagination .next:hover,
@@ -1039,6 +1040,7 @@ pre .javascript .function {
     border-top: 0;
     border-bottom: 1px solid #eee;
     padding: 0 10px;
+    color: #fff;
   }
   .pagination .prev:hover,
   .pagination .next:hover,
@@ -1960,7 +1962,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b5d688;
+  background: #9f533c;
 }
 .links-of-blogroll {
   font-size: 13px;
